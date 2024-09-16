@@ -15,32 +15,20 @@ high=d$High
 Parse data for histogram
 ```{r}
 l=NULL
-
 for (x in 2:length(high)) {
-  
   l[x-1]= high[x-1]-high[x]
 }
 
 h=NULL
-
 for (x in 2:length(low)) {
-  
   h[x-1]= low[x-1]-low[x]
 }
 ```
-
 Check
 ```{r}
 head(l)
 head(h)
 ```
-
-
-```{r}
-
-```
-
-
 ```{r}
 head(l)
 max(l)
@@ -49,28 +37,9 @@ head(h)
 max(h)
 min(h)
 ```
-
-
 ```{r}
-
-
 hist(l,breaks = 500, main="NVDA low to low differences", cex.axis=0.8, xlim=c(-12,12))
 
 hist(h,breaks = 500, main="NVDA high to high differences", cex.axis=0.8, xlim=c(-12,12))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ```
